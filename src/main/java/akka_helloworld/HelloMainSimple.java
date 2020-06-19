@@ -11,7 +11,7 @@ public class HelloMainSimple {
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create("HelloActorSystem", ConfigFactory.load("samplehello.conf"));
 
-        ActorRef actorRef = system.actorOf(Props.create(HelloWorldActor.class), "helloworldActor");
+        ActorRef actorRef = system.actorOf(Props.create(HelloWorldActor.class), "helloworldActor1");
         System.out.println("HelloWorld Actor Path: " + actorRef.path());
 
         system.terminate();
